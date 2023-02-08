@@ -1,7 +1,11 @@
-import { Context as RootContext } from './components/Annotations/machine';
+import { Context as RootContext, createRootMachine } from './components/Annotations/machine';
 import { URLImage } from './components/URLImage';
 import { useXShape, XShapeStage } from './components/XShape';
-// import { useXShape, XShapeStage, URLImage, type RootContext } from 'xshape';
+// import { useXShape, XShapeStage, URLImage, createRootMachine, type RootContext } from 'xshape';
+
+const mockDataUrl = import.meta.env.MODE === 'prod' ? 'mockAnnotations.json' : 'public/mockAnnotations.json';
+
+const rootMachine = createRootMachine(mockDataUrl);
 
 function App() {
   const {
@@ -17,7 +21,7 @@ function App() {
     fetchAnnotations,
     componentProps,
     localStorageKey,
-  } = useXShape();
+  } = useXShape(rootMachine);
 
   const customSave = async (_context: RootContext) => {
     return new Promise<void>((res) => {
@@ -66,12 +70,7 @@ function App() {
         >
           Remove
         </button>
-        <button
-          type="button"
-          id="fetch"
-          onClick={() => fetchAnnotations('mockAnnotations.json')}
-          disabled={!can.fetch}
-        >
+        <button type="button" id="fetch" onClick={() => fetchAnnotations(mockDataUrl)} disabled={!can.fetch}>
           Fetch
         </button>
         <button
