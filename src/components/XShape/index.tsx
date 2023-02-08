@@ -82,7 +82,7 @@ const XShapeStage: FC<PropsWithChildren<Props>> = ({
 const localStorageKey = 'persisted-context';
 const persistedContext = localStorage.getItem(localStorageKey);
 
-const rootMachine = createRootMachine('/mockAnnotations.json');
+const rootMachine = createRootMachine('mockAnnotations.json');
 
 const useXShape = () => {
   const [color, setColor] = useState(defaultColor);

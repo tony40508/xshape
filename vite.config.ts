@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
     ? { plugins: [react()] }
     : {
         plugins: [dts(), react()],
+        publicDir: false,
         build: {
           lib: {
             // Could also be a dictionary or array of multiple entry points

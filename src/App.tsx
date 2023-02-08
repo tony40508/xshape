@@ -69,7 +69,7 @@ function App() {
         <button
           type="button"
           id="fetch"
-          onClick={() => fetchAnnotations('/mockAnnotations.json')}
+          onClick={() => fetchAnnotations('mockAnnotations.json')}
           disabled={!can.fetch}
         >
           Fetch
