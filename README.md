@@ -14,7 +14,9 @@ npm install xshape
 ```js
 import { useXShape, XShapeStage, URLImage, createRootMachine } from 'xshape';
 
-const rootMachine = createRootMachine('initial-annotations-url-resource'); // url is optional
+// url is optional
+// data format see: https://github.com/tony40508/xshape/blob/main/public/mockData.json
+const rootMachine = createRootMachine('initial-shape-data-url');
 
 function App() {
   const {
@@ -25,13 +27,14 @@ function App() {
   return (
     <XShapeStage
       {...componentProps}
-      // enable to configure finish condition in limited options, see: https://github.com/tony40508/xshape/blob/main/src/utils/types.d.ts
+      // enable to configure finish condition in limited options
+      // see: https://github.com/tony40508/xshape/blob/main/src/utils/types.d.ts
       handleMouseDown={(e) => {
         componentProps.handleMouseDown(e, 'ctrl+click');
       }}
     >
       {/* URLImage is optional */}
-      <URLImage url="image-url-resource" />
+      <URLImage url="background-image-url" />
     </XShapeStage>
   );
 }
