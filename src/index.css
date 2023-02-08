@@ -1,0 +1,128 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-right: 5px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  width: 60px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 5px grey;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+#menu button {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: none;
+  margin: 0;
+  padding: 5px;
+}
+
+#menu button:hover {
+  background-color: #272424;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  #menu,
+  #menu button,
+  button {
+    background-color: #f9f9f9;
+  }
+  #menu button:hover {
+    background-color: lightgray;
+  }
+}
+
+dialog {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+input[type='text'] {
+  height: 39px;
+  margin-right: 5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+input[type='color'] {
+  height: 43px;
+  margin-right: 5px;
+  transform: translateY(11px);
+  border-radius: 8px;
+}
+
+#panel {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
