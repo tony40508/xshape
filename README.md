@@ -5,6 +5,8 @@
 
 ## Install
 
+[![NPM](https://nodei.co/npm/xshape.png)](https://nodei.co/npm/xshape/)
+
 ```bash
 npm install xshape
 ```
