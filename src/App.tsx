@@ -1,7 +1,7 @@
-import { Context as RootContext, createRootMachine } from './components/Annotations/machine';
-import { URLImage } from './components/URLImage';
-import { useXShape, XShapeStage } from './components/XShape';
-// import { useXShape, XShapeStage, URLImage, createRootMachine, type RootContext } from 'xshape';
+// import { Context as RootContext, createRootMachine } from './components/Annotations/machine';
+// import { URLImage } from './components/URLImage';
+// import { useXShape, XShapeStage } from './components/XShape';
+import { useXShape, XShapeStage, URLImage, createRootMachine, type RootContext } from 'xshape';
 
 const mockDataUrl = import.meta.env.MODE === 'prod' ? 'mockData.json' : 'public/mockData.json';
 

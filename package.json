@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-konva": "^18.2.3",
     "use-image": "^1.1.0",
+    "xshape": "latest",
     "xstate": "^4.34.0"
   },
   "devDependencies": {
