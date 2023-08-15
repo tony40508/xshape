@@ -88,7 +88,7 @@ function App() {
         <button onClick={() => send('RETRY')}>Retry</button>
         <button onClick={() => send('CHANGE.TOOL.IDLE')}>Cancel</button>
       </dialog>
-      <div id="menu" ref={menuRef}>
+      <div id="menu" ref={state.matches('idle') ? menuRef : undefined}>
         <button onClick={handleDeleteMenu}>Delete</button>
       </div>
       <XShapeStage {...componentProps}>
